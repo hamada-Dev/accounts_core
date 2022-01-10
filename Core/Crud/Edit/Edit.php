@@ -1,17 +1,21 @@
 <?php
 namespace Core\Crud\Edit;
 
+use Common\Handler\MessageResponse;
+use Domain\CostCenter\CostCenter;
 use Illuminate\Database\Eloquent\Model;
 
 class Edit implements IEdit{
 
-    public function update($data,Model $model)
+    use  MessageResponse;
+
+    public function update($data,Model $model, $id)
     {
         try {
-            $model=$model->update($data);
-            return ['message' => 'Data updated Successfully ', 'data' => $model];
-        } catch (\Exception $ex) {
-            return $ex;
+            $model = $model->find($id)->update($data);
+            return ['message' => 'Data updated Successfully   88888888888 ', 'data' => $model];
+        } catch (\Throwable $e) {
+            return $this->customApiResponse($e);
         }
     }
 }

@@ -26,11 +26,11 @@ class CostCenterController extends BaseController
 
     public function update(CostCenterRequest $request, Edit $edit, $id)
     {
-        return $edit->update($request->data(), $this->model->findOrFail($id));
+        return $edit->update($request->data(), $this->model, $id);
     }
 
     public function destroy(Delete $delete, $id)
     {
-        return $delete->delete($this->model->findOrFail($id));
+        return $delete->delete($this->model, $id);
     }
 }

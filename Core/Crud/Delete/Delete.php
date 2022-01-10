@@ -1,16 +1,20 @@
 <?php
 namespace Core\Crud\Delete;
 
+use Common\Handler\MessageResponse;
 use Illuminate\Database\Eloquent\Model;
 
 class Delete implements IDelete{
-    public function delete(Model $model)
+
+    use  MessageResponse;
+
+    public function delete(Model $model, $id)
     {
         try {
-            $model=$model->delete();
+            $model->find($id)->delete();
             return ['message' => 'Data deleted Successfully '];
-        } catch (\Exception $ex) {
-            return $ex;
+        } catch (\Throwable $e) {
+            return $this->customApiResponse($e);
         }
 
     }

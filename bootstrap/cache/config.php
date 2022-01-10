@@ -177,7 +177,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/framework/cache/data',
+        'path' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -343,12 +343,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/app',
+        'root' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/app/public',
+        'root' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/app/public',
         'url' => '/storage',
         'visibility' => 'public',
       ),
@@ -365,7 +365,7 @@
     ),
     'links' => 
     array (
-      '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/public/storage' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/app/public',
+      '/opt/lampp/htdocs/Fastwold company/accounts_core/public/storage' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -399,13 +399,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -455,7 +455,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/logs/laravel.log',
+        'path' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -512,7 +512,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/resources/views/vendor/mail',
+        0 => '/opt/lampp/htdocs/Fastwold company/accounts_core/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -591,7 +591,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/framework/sessions',
+    'files' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -611,9 +611,9 @@
   array (
     'paths' => 
     array (
-      0 => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/resources/views',
+      0 => '/opt/lampp/htdocs/Fastwold company/accounts_core/resources/views',
     ),
-    'compiled' => '/opt/lampp/htdocs/Fastwold company/onion-architecture-pro/storage/framework/views',
+    'compiled' => '/opt/lampp/htdocs/Fastwold company/accounts_core/storage/framework/views',
   ),
   'flare' => 
   array (
