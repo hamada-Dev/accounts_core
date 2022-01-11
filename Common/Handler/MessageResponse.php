@@ -3,7 +3,7 @@ namespace Common\Handler;
 
 trait MessageResponse{
 
-    private function customApiResponse($exception)
+    public function customApiResponse($exception)
     {
         if (method_exists($exception, 'getStatusCode')) {
             $statusCode = $exception->getStatusCode();
@@ -45,6 +45,14 @@ trait MessageResponse{
         return response()->json($response, $statusCode);
     }
 
-
+    public function customApiResponseSuccess($data = [], $message = null, $code = 200, $status = 'success')
+    {
+        $responseSuccess = [
+            'code'          => $code,
+            'status'        => $status,
+            'message'       => $message,
+            'data'          => $data,
+        ];
+        return response()->json($responseSuccess);
+    }
 }
-

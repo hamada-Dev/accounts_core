@@ -2,11 +2,13 @@
 
 namespace App\Exceptions;
 
+use Common\Handler\MessageResponse;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
+    use MessageResponse;
     /**
      * A list of the exception types that are not reported.
      *
@@ -48,8 +50,10 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
+    public function render($request, \Throwable $exception)
     {
+        if($exception)
+            return $this->customApiResponse($exception);
         return  parent::render($request, $exception);
 
     }

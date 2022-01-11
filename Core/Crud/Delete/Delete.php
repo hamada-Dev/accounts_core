@@ -10,12 +10,6 @@ class Delete implements IDelete{
 
     public function delete(Model $model, $id)
     {
-        try {
-            $model->find($id)->delete();
-            return ['message' => 'Data deleted Successfully '];
-        } catch (\Throwable $e) {
-            return $this->customApiResponse($e);
-        }
-
+        return $this->customApiResponseSuccess($model->find($id)->delete(), 'Data deleted Successfully ');
     }
 }

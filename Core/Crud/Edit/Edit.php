@@ -11,11 +11,14 @@ class Edit implements IEdit{
 
     public function update($data,Model $model, $id)
     {
-        try {
-            $model = $model->find($id)->update($data);
-            return ['message' => 'Data updated Successfully   88888888888 ', 'data' => $model];
-        } catch (\Throwable $e) {
-            return $this->customApiResponse($e);
-        }
+
+        return $this->customApiResponseSuccess($model->find($id)->update($data), 'Data updated Successfully ');
+
+//        try {
+//            $model = $model->find($id)->update($data);
+//            return ['message' => 'Data updated Successfully   88888888888 ', 'data' => $model];
+//        } catch (\Throwable $e) {
+//            return $this->customApiResponse($e);
+//        }
     }
 }

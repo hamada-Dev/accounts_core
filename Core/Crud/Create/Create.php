@@ -10,12 +10,7 @@ class Create implements ICreate{
 
     public function store($data,Model $model)
     {
-        try {
-            $model=$model->create($data);
-            return ['message' => 'Data Insert Successfully ', 'data' => $model];
-        } catch (\Throwable $e) {
-            return $this->customApiResponse($e);
-        }
+        return $this->customApiResponseSuccess($model->create($data), 'Data Added Successfully ');
 
     }
 }
